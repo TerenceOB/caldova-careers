@@ -1,7 +1,7 @@
 ---
 interface Props {
     /** Visual color of the tag. */
-    color?: "blue" | "slate";
+    color?: "blue" | "slate" | "yellow";
     /** Optional test id passthrough. */
     "data-testid"?: string;
 }
@@ -11,6 +11,7 @@ const { color = "blue", ...rest } = Astro.props;
 const colors: Record<NonNullable<Props["color"]>, string> = {
     blue: "bg-blue-500/15 text-blue-300 border border-blue-500/30",
     slate: "bg-slate-500/15 text-slate-300 border border-slate-500/30",
+    yellow: "bg-yellow-400/15 text-yellow-300 border border-yellow-400/40",
 };
 ---
 
